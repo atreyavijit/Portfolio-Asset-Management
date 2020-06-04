@@ -1,0 +1,98 @@
+﻿<Window x:Class="wpfPortfolioAssetManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPortfolioAssetManagement"
+         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Asset Portfolio Management System" Height="470" Width="878">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Search" Click="Search_MenuClick"></MenuItem>
+            <MenuItem Name="menuCompareAssets"  Header="_Compare Assets" Click="CompareAssets_MenuClick"></MenuItem>
+
+            <MenuItem Header="_User Actions">
+                <MenuItem Header="_Login" Click="Login_MenuClick" Name="Login_Menu"></MenuItem>
+                <MenuItem Header="_My Portfolio" Click="Portfolio_MenuClick" Name="Portfolio_Menu"></MenuItem>
+                <MenuItem Header="_My Watchlist" Click="Watchlist_MenuClick" Name="Watchlist_Menu"></MenuItem>
+                <MenuItem Header="_Register" Click="Register_MenuClick" Name="Register_Menu"></MenuItem>
+                <MenuItem Header="L_ogout" Click="Logout_MenuClick" Name="Logout_Menu"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="179*"/>
+                <ColumnDefinition Width="21*"/>
+                <ColumnDefinition Width="672*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="lvAssets" HorizontalAlignment="Left" Height="323" VerticalAlignment="Top" Width="852" Margin="10,40,0,0" GridViewColumnHeader.Click="LvAssets_Click" Grid.ColumnSpan="3">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Symbol}" Width="80">
+                            <GridViewColumnHeader Tag="Symbol" Content="Symbol"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding FullExchangeName}" Width="80">
+                            <GridViewColumnHeader Tag="FullExchangeName" Content="Exchange Name"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding FormattedPrice}" Width="100">
+                            <GridViewColumnHeader Tag="MarketPrice" Content="Market Price"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding FormattedChangePercent}" Width="80">
+                            <GridViewColumnHeader Tag="MarketChangePercent" Content="Change (%)"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding FormattedTime}" Width="100">
+                            <GridViewColumnHeader Tag="MarketTime" Content="Market Time"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Market}" Width="90">
+                            <GridViewColumnHeader Tag="Market" Content="Market"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding QuoteType}" Width="90">
+                            <GridViewColumnHeader Tag="QuoteType" Content="Type"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Language}" Width="70">
+                            <GridViewColumnHeader Tag="Language" Content="Language"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ExchangeTimeZone}" Width="130">
+                            <GridViewColumnHeader Tag="ExchangeTimeZone" Content="Exchange TimeZone"/>
+                        </GridViewColumn>
+                    </GridView>
+
+                </ListView.View>
+            </ListView>
+            <TextBox x:Name="tbSearch" Margin="10,7,588,385.2" KeyUp="TbSearch_KeyUp" Grid.ColumnSpan="3"/>
+
+            <Label x:Name="label" Content="Lang:" HorizontalAlignment="Left" Height="28" Margin="94,8,0,0" VerticalAlignment="Top" Width="41" Grid.Column="2"/>
+
+            <ComboBox x:Name="cmbLang" HorizontalAlignment="Left" Height="22" Margin="234,10,0,0" VerticalAlignment="Top" Width="40" Grid.Column="2">
+                <ComboBoxItem IsSelected="True" Content="en"/>
+                <ComboBoxItem Content="fr"/>
+                <ComboBoxItem Content="de"/>
+                <ComboBoxItem Content="it"/>
+                <ComboBoxItem Content="zh"/>
+            </ComboBox>
+            <Label x:Name="lblRegion" Content="Region:" HorizontalAlignment="Left" Height="28" Margin="181,8,0,0" VerticalAlignment="Top" Width="55" Grid.Column="2"/>
+            <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Height="22" Margin="135,10,0,0" VerticalAlignment="Top" Width="44" Grid.Column="2">
+                <ComboBoxItem IsSelected="True" Content="US"/>
+                <ComboBoxItem Content="AU"/>
+                <ComboBoxItem Content="CA"/>
+                <ComboBoxItem Content="DE"/>
+                <ComboBoxItem Content="ES"/>
+                <ComboBoxItem Content="FR"/>
+                <ComboBoxItem Content="GB"/>
+                <ComboBoxItem Content="HK"/>
+                <ComboBoxItem Content="IN"/>
+                <ComboBoxItem Content="IT"/>
+            </ComboBox>
+            <Label x:Name="lblRegion_Copy" Content="Source:" HorizontalAlignment="Left" Height="28" Margin="279,8,0,0" VerticalAlignment="Top" Width="55" Grid.Column="2"/>
+            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="22" Margin="325,10,0,0" VerticalAlignment="Top" Width="136" Grid.Column="2">
+                <ComboBoxItem IsSelected="True" Content="Yahoo Finance"/>
+            </ComboBox>
+            <Label Name="lbWelcome" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,368,0,0" VerticalAlignment="Top" Width="862" Grid.ColumnSpan="3" Height="45" FontSize="20"/>
+
+
+        </Grid>
+    </DockPanel>
+
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="wpfPortfolioAssetManagement.AssetCompareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPortfolioAssetManagement"
+        xmlns:PointShapeLine="clr-namespace:Wpf.CartesianChart.PointShapeLine"
+        mc:Ignorable="d"
+        Title="AssetCompareWindow" Height="450" Width="1376">
+    <Grid>
+        <PointShapeLine:AssetsChart x:Name="pslChart" HorizontalAlignment="Left" Margin="236,12,0,0" VerticalAlignment="Top" Height="328" Width="1053"/>
+        <ListView Name="lvLines" HorizontalAlignment="Left" Height="365" Margin="10,10,0,0" VerticalAlignment="Top" Width="211" SelectionChanged="LvLines_SelectionChanged"/>
+        <StackPanel Orientation="Horizontal" Margin="308,380,80.6,8" >
+            <RadioButton IsChecked="True" Name ="rbOpen" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rb_Click"/>
+            <RadioButton Name ="rbHigh" Content="High" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Top" Click="Rb_Click"/>
+            <RadioButton Name ="rbLow" Content="Low" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Top" Click="Rb_Click"/>
+            <RadioButton Name ="rbClose" Content="Close" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Top" Click="Rb_Click"/>
+            <RadioButton Name ="rbVolume" Content="Volume" HorizontalAlignment="Left" Margin="25 0 0 0" VerticalAlignment="Top" Click="Rb_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

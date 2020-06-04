@@ -1,0 +1,241 @@
+2019/05/02 Tyler
+1. Done since last scrum:
+- preapred some parts of the project proposal
+- created project plan
+- created database mockup
+2. To do until next Scrum:
+- finish the description
+- setup as much WPF Windows as possible.
+- create the custom dialog for user login
+- setup the database on Azure
+- Create more tables in SQL
+- Learn more about API being used from RapidAPI
+3. Need assistance / figure things out
+- Graph Library
+- Understanding some data points in API
+
+2019/05/02 Vijit
+1. Done since last scrum:
+- preapred some parts of the project proposal
+- created project plan
+- created database mockup
+2. To do until next Scrum:
+- Research about charts
+- Research about RapidAPI
+3. Need assistance / figure things out
+- use graph libraries
+- use of RapidAPI
+
+2019/05/03 Tyler Morning
+1. Done since last scrum:
+- Completed rough draft of proposal
+- Added Graph window
+- Added options for language and regions when searching for symbols
+- Researched more about RapidAPI's Yahoo Finance API.
+2. To do until next scrum:
+- To complete search window and link with database
+- To re-design and populate main window with relevent data.
+- To create My Portfolio Window
+3. Need assistance / figure things out
+- Which API URL's[yahoo finance] to pull from (single source api not multiple) for market listing prices
+- learn to use graph Library [lvCharts]
+
+2019/05/03 Vijit Morning
+1. Done since last scrum:
+- Finalized the draft proposal
+- studied a bit on the LiveCharts library
+- worked some example charts (line charts) with fix number of data
+- researched a bit about RapidAPI
+2. To do until next Scrum:
+- Research more about drawing charts from variable number of data
+- Dynamically draw and delete the chart for an item when the item is clicked and unclicked
+- Research more on RapidAPI
+3. Need assistance / figure things out
+- featching daily asset data from API
+- learning more on Live Charts
+
+2019/05/04 Tyler Morning
+1. Done since last scrum:
+- Completed final draft of proposal
+- Almost completed search window (needs more for context menus maybe and login functionality)
+- Compiled first version of application and committed to bitbucket
+- Researched more about RapidAPI's Yahoo Finance API to integrate market-summary and auto-complete.
+2. To do until next scrum:
+- To main window and link with database
+- To re-design and populate main window with relevent data.
+- To create My Portfolio Window
+3. Need assistance / figure things out
+- Which API URL's[yahoo finance] to pull from (single source api not multiple) for market listing prices
+- learn to use graph Library [lvCharts]
+
+2019/05/04 Vijit Morning
+1. Done since last scrum:
+- Learned drawing charts for multiple data series
+- Learned generating charts dynamically based on user data series selection
+2. To do until next Scrum:
+- Design login form
+- Implement handlers and in the code behind
+- Testing to make sure the sample charts works fine under different user interactions
+3. Need assistance / figure things out
+- learn to use RapidAPI (still under research)
+- figure out which API URL to pull from
+
+2019/05/06 Vijit
+1. Done since last scrum:
+- Designed the login dialog
+- verified the login data that are provided by the user in the login dialog (assumed login data)
+- tested the chart (more testing needed)
+2. To do until next Scrum:
+- Verify that the login details are correct with respect to the data present in the database
+- test if the login works fine
+- more testing on the charts
+3. Need assistance / figure things out
+- learn to use RapidAPI (still under research)
+
+2019/05/06 Tyler
+1. Done since last scrum:
+- Implemented Login table
+- Implemented Encryption library Bcrypt
+- MarketSummary, Asset and API Class have been redesigned.
+2. To do until next scrum:
+- Search window needs more for context menus. (maybe login functionality?)
+- To finish main window and link with database
+- To re-design and populate main window with relevent data.
+- To create My Portfolio Window
+- To create Register form
+- Research more about RapidAPI's Yahoo Finance API to integrate more features.
+3. Need assistance / figure things out
+- Which API URL's[yahoo finance] to pull from (single source api not multiple) for market listing prices ( historics )
+- learn to use graph Library [lvCharts]
+
+2019/05/07 Vijit
+1. Done since last scrum:
+- integrated chart example in main project
+2. To do until next Scrum:
+- design registration form
+- verify registration
+- verify login from database
+- test if the login works fine
+- more testing on the charts
+3. Need assistance / figure things out
+
+
+2019/05/07 Tyler
+1. Done since last scrum:
+- Connected and implemented Assets/AssetHistory tables to Azure Database
+- MarketSummary successfully being inserted to database
+- Created 1-Create Tables.SQL and 2-Stored Procedures.SQL
+- Main window linked with database
+2. To do until next scrum:
+- Search window needs more for context menus. (maybe login functionality?)
+- To finish main window*
+- To re-design and populate main window with relevent data.*
+- To create My Portfolio Window
+- To create Register form
+- Research more about RapidAPI's Yahoo Finance API to integrate more features.
+3. Need assistance / figure things out
+- Fixing DataTypes of Database for tables Assets and AssetHistory.
+- learn to use graph Library [lvCharts]
+
+*Still high priority
+
+2019/05/08 Tyler
+1. Done since last scrum:
+- Fixed some context menus
+2. To do until next scrum:
+- To create My Portfolio Window
+- Research more about RapidAPI's Yahoo Finance API to integrate more features.
+- Integrate materail design with NuGet
+3. Need assistance / figure things out
+- Fixing DataTypes of Database for tables Assets and AssetHistory*
+- learn to use graph Library [lvCharts]
+- Pull more API data from RapidAPI*
+
+*Still high priority
+
+2019/05/08 Vijit
+1. Done since last scrum:
+- Completed registration
+- Completed login
+- Completed Access control
+2. To do until next scrum:
+- research on fetching live asset history comparison
+- Work on generating charts of asset history
+3. Need assistance / figure things out
+- finding API for fetching live asset history comparison
+
+2019/05/09 Vijit
+1. Done since last scrum:
+- Done Research for API to get asset history
+- Found an API (Alpha Vantage) for the data required
+2. To do until next scrum:
+- Try to get asset histroy from Alpha Vantage API (Will not be able to work though beacuse of family function - informed to teacher as well)
+3. Need assistance / figure things out
+- understanding Alpha Vantage
+
+
+2019/05/09 Tyler
+1. Done since last scrum:
+- Added SetLogin()
+- Added HideLogin()
+- Researched context menus hiding and showing (advanced MVVM)
+2. To do until next scrum:
+- To create My Portfolio Window
+- Research more about RapidAPI's other API's to integrate more features.
+- Integrate material design with NuGet
+- Research API data from Alpha Vantage
+- Insert historical data into assets ** From last date time selected if already inserted
+- Compare historical data.
+3. Need assistance / figure things out
+- Fixing DataTypes of Database for tables Assets and AssetHistory* (Essential)
+- Researching API data*
+
+*High priority
+
+2019/05/10 Vijit
+1. Done since last scrum:
+2. To do until next scrum:
+- Research API data from Alpha Vantage
+- Try to get asset histroy from Alpha Vantage API
+3. Need assistance / figure things out
+- understanding Alpha Vantage API
+- fixing data types of database tablesAssets and AssetHistory
+
+2019/05/10 Tyler
+1. Done since last scrum:
+- Created Portfolio window
+- Created Watchlist class and Watchlist window
+- Added Add to watchlist context menu inserting into database Watchlist table (Search Window)
+2. To do until next scrum:
+- Research more about RapidAPI's other API's to integrate more features.
+- Integrate material design with NuGet
+- Research API data from Alpha Vantage
+- Insert historical data into assets ** From last date time selected if already inserted
+- Compare historical data.
+3. Need assistance / figure things out
+- Fixing DataTypes of Database for tables Assets and AssetHistory* (Essential)
+- Researching AlphaVantage API data*
+
+2019/05/12 Vijit
+1. Done since last scrum:
+- Fetched asset history from Alpha Vantage
+- completed charts
+2. To do until next scrum:
+- Test the system as a whole
+- Make the presentation
+- Research about material design
+3. Need assistance / figure things out
+
+2019/05/12 Tyler
+1. Done since last scrum:
+- Completed watchlist
+- Completed Portfolio
+2. To do until next scrum:
+- Test the system as a whole
+- Make the presentation
+3. Need assistance / figure things out
+
+
+
+
+

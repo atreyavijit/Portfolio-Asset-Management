@@ -1,0 +1,19 @@
+﻿<Window x:Class="wpfPortfolioAssetManagement.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPortfolioAssetManagement"
+        mc:Ignorable="d"
+        Title="Registration" Height="229.206" Width="391.099">
+    <Grid>
+        <Label Content="Email Address:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbRegisterEmail" HorizontalAlignment="Left" Height="23" Margin="122,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <PasswordBox Name="tbRegisterPassword" HorizontalAlignment="Left" Height="23" Margin="120,60,0,0" VerticalAlignment="Top" Width="233"/>
+        <Button Name="btRegister" IsDefault="True" Content="Register &gt;" HorizontalAlignment="Left" Margin="120,160,0,0" VerticalAlignment="Top" Width="111" Click="BtRegister_Click"/>
+        <Label Content="Retype Password:" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="tbRegisterPasswordAgain" HorizontalAlignment="Left" Height="23" Margin="120,110,0,0" VerticalAlignment="Top" Width="233"/>
+
+    </Grid>
+</Window>

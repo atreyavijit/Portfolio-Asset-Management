@@ -1,0 +1,65 @@
+﻿<Window x:Class="wpfPortfolioAssetManagement.AssetSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPortfolioAssetManagement"
+        mc:Ignorable="d"
+        Title="Search Asset Symbol" Height="470" Width="824">
+    <DockPanel>
+        <Grid>
+
+            <StackPanel Margin="10,50,10,10" Orientation="Vertical" Height="450" Width="800">
+                <ListView x:Name="lvAssets" HorizontalAlignment="Left" Height="375" VerticalAlignment="Top" Width="795">
+                    <ListView.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Name="Menu_WatchlistAdd" Click="Menu_WatchlistAdd_Click" Header="Add to Watchlist"/>
+                        </ContextMenu>
+
+                    </ListView.ContextMenu>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Symbol" DisplayMemberBinding="{Binding Symbol}" Width="80"/>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="200" />
+                            <GridViewColumn Header="Exchange" DisplayMemberBinding="{Binding Exchange}" Width="80"/>
+                            <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="80"/>
+                            <GridViewColumn Header="ExchangeDisp" DisplayMemberBinding="{Binding ExchangeDisp}" Width="80"/>
+                            <GridViewColumn Header="TypeDisp" DisplayMemberBinding="{Binding TypeDisp}" Width="80"/>
+                        </GridView>
+
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+            <TextBox x:Name="tbSearch" KeyUp="Search_KeyUp" HorizontalAlignment="Left" Height="23" Margin="10,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="420"/>
+            <Label x:Name="label" Content="Lang:" HorizontalAlignment="Left" Height="28" Margin="435,10,0,0" VerticalAlignment="Top" Width="41"/>
+
+            <ComboBox x:Name="cmbLang" HorizontalAlignment="Left" Height="20" Margin="477,15,0,0" VerticalAlignment="Top" Width="45" Padding="8,2,5,3">
+                <ComboBoxItem IsSelected="True" Content="en"/>
+                <ComboBoxItem Content="fr"/>
+                <ComboBoxItem Content="de"/>
+                <ComboBoxItem Content="it"/>
+                <ComboBoxItem Content="zh"/>
+            </ComboBox>
+            <Label x:Name="lblRegion" Content="Region:" HorizontalAlignment="Left" Height="28" Margin="527,10,0,0" VerticalAlignment="Top" Width="55"/>
+            <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Height="20" Margin="583,15,0,0" VerticalAlignment="Top" Width="45" Padding="8,2,5,3">
+                <ComboBoxItem IsSelected="True" Content="US"/>
+                <ComboBoxItem Content="AU"/>
+                <ComboBoxItem Content="CA"/>
+                <ComboBoxItem Content="DE"/>
+                <ComboBoxItem Content="ES"/>
+                <ComboBoxItem Content="FR"/>
+                <ComboBoxItem Content="GB"/>
+                <ComboBoxItem Content="HK"/>
+                <ComboBoxItem Content="IN"/>
+                <ComboBoxItem Content="IT"/>
+            </ComboBox>
+            <Label x:Name="lblRegion_Copy" Content="Source:" HorizontalAlignment="Left" Height="28" Margin="633,10,0,0" VerticalAlignment="Top" Width="55"/>
+            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="26" Margin="689,12,0,0" VerticalAlignment="Top" Width="117">
+                <ComboBoxItem IsSelected="True" Content="Yahoo Finance"/>
+            </ComboBox>
+
+        </Grid>
+    </DockPanel>
+
+</Window>
+
